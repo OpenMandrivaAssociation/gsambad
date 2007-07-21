@@ -1,6 +1,6 @@
 Summary:	GSAMBAD -- A GTK+ administation tool for the SAMBA server
 Name:		gsambad
-Version:	0.1.5
+Version:	0.1.6
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Networking
@@ -66,19 +66,6 @@ convert -geometry 48x48 pixmaps/%{name}.png %{buildroot}%{_liconsdir}/%{name}.pn
 convert -geometry 32x32 pixmaps/%{name}.png %{buildroot}%{_iconsdir}/%{name}.png
 convert -geometry 16x16 pixmaps/%{name}.png %{buildroot}%{_miconsdir}/%{name}.png
 
-# Mandrake Menus
-install -d %{buildroot}/%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): \
- command="%{_sbindir}/%{name}" \
- title="GSAMBAD" \
- longtitle="samba server administration tool" \
- needs="x11" \
- icon="%{name}.png" \
- section="Configuration/Networking" \
- xdg="true"
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -88,7 +75,7 @@ Exec=%{_sbindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
+Categories=Settings;Network;
 EOF
 
 # Prepare usermode entry
@@ -133,10 +120,7 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/%{name}/*.png
 %{_datadir}/pixmaps/%{name}/%{name}.png
 %{_datadir}/applications/*
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_bindir}/*
-
-
