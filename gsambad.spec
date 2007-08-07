@@ -1,6 +1,6 @@
 Summary:	GSAMBAD -- A GTK+ administation tool for the SAMBA server
 Name:		gsambad
-Version:	0.1.6
+Version:	0.1.7
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Networking
