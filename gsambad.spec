@@ -58,7 +58,7 @@ install -m 644 etc/security/console.apps/%{name} %{buildroot}%{_sysconfdir}/secu
 ## locales
 %find_lang %name
 
-# Mandrake Icons
+# Mandriva Icons
 install -d %{buildroot}%{_iconsdir}
 install -d %{buildroot}%{_miconsdir}
 install -d %{buildroot}%{_liconsdir}
