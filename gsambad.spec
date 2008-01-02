@@ -14,6 +14,7 @@ BuildRequires:	ImageMagick
 Requires:	samba-server >= 3.0
 Requires:	openssl
 Requires:	usermode-consoleonly
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 GSAMBAD is a fast and easy to use GTK+ administration tool for the
