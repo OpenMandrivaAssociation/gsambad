@@ -98,11 +98,15 @@ _EOF_
 rm -rf %{buildroot}%{_datadir}/doc/%{name}
 
 %post
+%if %mdkversion < 200900
 %update_menus
+%endif
 mv /bin/scripts/example.bat /home/netlogon/example.bat
 
 %postun
+%if %mdkversion < 200900
 %clean_menus
+%endif
 rm -rf /home/netlogon/example.bat
 
 %clean
