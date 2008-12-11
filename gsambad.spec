@@ -10,7 +10,7 @@ Source1:	%{name}.pam-0.77.bz2
 Source2:	%{name}.pam.bz2
 Patch0:		gsambad-fix-netlogon-script.patch
 BuildRequires:	gtk+2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 Requires:	samba-server >= 3.0
 Requires:	openssl
 Requires:	usermode-consoleonly
