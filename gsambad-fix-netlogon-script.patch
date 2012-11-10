@@ -1,0 +1,18 @@
+--- Makefile.in.orig	2006-07-02 17:08:57.000000000 +0200
++++ Makefile.in	2006-07-18 01:32:46.000000000 +0200
+@@ -653,12 +653,9 @@
+ 	if test -d $(DESTDIR)$(bindir) && test ! -f $(DESTDIR)$(bindir)/gsambadpdf; then \
+ 	   cp scripts/gsambadpdf $(bindir)/; \
+ 	fi;
+-	@echo Installing example logon script to static /home/netlogon.
+-	if test ! -d /home/netlogon; then \
+-	   mkdir -p /home/netlogon; \
+-	fi;
+-	if test -d /home/netlogon && test ! -f /home/netlogon/example.bat; then \
+-	   cp scripts/example.bat /home/netlogon/; \
++	@echo Storing example logon script to bindir
++	if test -d $(DESTDIR)$(bindir) && test ! -f $(DESTDIR)$(bindir)/example.bat; then \
++	   cp scripts/example.bat $(bindir)/; \
+ 	fi;
+ 	@echo ""
+ 	@echo "Start GSAMBAD by typing gsambad in a terminal"
