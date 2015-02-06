@@ -1,7 +1,7 @@
 Summary:	A GTK+ administation tool for the SAMBA server
 Name:		gsambad
 Version:	0.1.9
-Release:	%mkrel 5
+Release:	6
 License:	GPLv3
 Group:		System/Configuration/Networking
 URL:		http://www.gadmintools.org/
