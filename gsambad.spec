@@ -9,6 +9,11 @@ Source0:	http://mange.dynalias.org/linux/gsambad/%{name}-%{version}.tar.bz2
 Source1:	%{name}.pam-0.77.bz2
 Source2:	%{name}.pam.bz2
 Patch0:		gsambad-fix-netlogon-script.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	imagemagick
 Requires:	samba-server >= 3.0
